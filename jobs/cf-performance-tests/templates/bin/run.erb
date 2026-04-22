@@ -5,7 +5,7 @@ set -ex
 exec > >(tee -a /var/vcap/sys/log/cf-performance-tests/cf-performance-tests.stdout)
 exec 2> >(tee -a /var/vcap/sys/log/cf-performance-tests/cf-performance-tests.stderr)
 
-source /var/vcap/packages/golang-1.23-linux/bosh/runtime.env
+source /var/vcap/packages/golang-1.26-linux/bosh/runtime.env
 export PATH=/var/vcap/jobs/cf-performance-tests/packages/cf-cli-8-linux/bin:$PATH
 
 cp /var/vcap/jobs/cf-performance-tests/config.yml /var/vcap/jobs/cf-performance-tests/packages/cf_performance_tests
